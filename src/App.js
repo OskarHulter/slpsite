@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import Player from './Player';
 import Logo from './components/logo';
 import Button from './components/button';
 

@@ -1,22 +1,20 @@
+@import "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700";
+
 :root {
-  --black: #121212;
-  --white: #ffffff;
-  --orange: #ff4700;
-  --blue: #1d2d3a;
-  --color: #000000;
+  --bluedarkdeep: #150D3F;
+  --bluedeep: #1E1354;
+  --purpledeep: #3E0E6F;
+  --purpleshine: #861ED0;
+  --purpleroyal: #721184;
+  --white: #F2F0CD;
   --gradientBackground: linear-gradient(
     to bottom,
-    rgba(var(--color), 0) 0%,
-    rgba(var(--color), 1) 100%
+    rgba(var(--purpleroyal), 0) 0%,
+    rgba(var(--purpledeep), 1) 100%
   );
 }
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
 }
 
 .App-header {
@@ -30,7 +28,7 @@
   font-size: 1.5em;
 }
 
-@keyframes App-logo-spin {
+@keyframes loading-spin {
   from {
     transform: rotate(0deg);
   }
@@ -39,162 +37,13 @@
   }
 }
 
-@import "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700";
 
 body {
-  align-items: center;
-  background: darken(var(--blue), 10);
   display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: darken(var(--gradientBackground), 10);
   font-family: "Roboto", sans-serif;
   color: var(--white);
-  height: 100vh;
-  justify-content: center;
-}
-
-/* Player start */
-.Player {
-  background: darken(var(--blue), 3);
-  border-radius: 5px;
-  overflow: hidden;
-  box-shadow: 0 5px 10px -5px rgba(var(--black), 1);
-  height: 667px;
-  position: relative;
-  width: 375px;
-}
-
-.Player .Background {
-  width: 150%;
-  height: 150%;
-  position: absolute;
-  top: -25%;
-  left: -25%;
-  background: url(https://funkadelphia.files.wordpress.com/2012/09/odesza-summers-gone-lp.jpg);
-  background-size: cover;
-  background-position: center center;
-  opacity: 0.2;
-  filter: blur(10px);
-}
-
-.Player .Title {
-  width: 300px;
-  margin: 50px auto;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  position: relative;
-}
-
-.Player .Artwork {
-  width: 300px;
-  height: 300px;
-  background: url(https://funkadelphia.files.wordpress.com/2012/09/odesza-summers-gone-lp.jpg);
-  background-size: cover;
-  background-position: center center;
-  border-radius: 4px;
-  margin: auto;
-  box-shadow: 0 5px 10px -5px rgba(var(--black), 0.25);
-  position: relative;
-}
-
-.Player .TrackInformation {
-  width: 300px;
-  margin: 30px auto;
-  text-align: center;
-  position: relative;
-}
-.Player .TrackInformation .Name {
-  font-size: 24px;
-  margin-bottom: 10px;
-  font-weight: 300;
-}
-
-.Player .TrackInformation .Artist {
-  font-size: 16px;
-  margin-bottom: 5px;
-  font-weight: 500;
-}
-
-.Player .TrackInformation .Album {
-  font-size: 12px;
-  opacity: 0.5;
-}
-
-.Player .Scrubber {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 20%;
-  opacity: 0.2;
-  transition: opacity 0.25s ease;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-.Player .Scrubber:active {
-  opacity: 1;
-}
-
-.Player .Scrubber .Scrubber-Progress {
-  background: var(--gradientBackground);
-  height: 100%;
-  width: 0%;
-  transition: width 0.25s ease;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-.Player .Timestamps {
-  display: flex;
-  justify-content: space-between;
-  box-sizing: border-box;
-  padding: 20px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 2;
-  width: 100%;
-}
-
-.Player .Timestamps .Time {
-  font-size: 12px;
-}
-
-.Player .Controls {
-  position: absolute;
-  bottom: 8%;
-  pointer-events: none;
-  margin: auto;
-  left: 0;
-  right: 0;
-}
-
-.Player .Controls .Button {
-  height: 75px;
-  width: 75px;
-  border: 2px solid var(--white);
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 75px;
-  box-shadow: 0 5px 10px 0px rgba(var(--black), 0.125);
-  margin: auto;
-  pointer-events: all;
-}
-
-.Player .Controls .Button:active {
-  transform: scale(0.98);
-  background: var(--white);
-}
-
-.Player .Controls .fa {
-  color: var(--white);
-  opacity: 0.5;
-  font-size: 24px;
-}
-
-.Player .Controls .fa .fa-play {
-  margin-left: 5px;
 }
